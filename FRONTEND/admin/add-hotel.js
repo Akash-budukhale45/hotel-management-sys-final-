@@ -13,7 +13,7 @@ const token = localStorage.getItem("token");
 
 try {
 
-const res = await fetch("http://localhost:5000/api/hotels", {
+const res = await fetch("https://hotel-management-sys-final-ozya.onrender.com/", {
 
 method: "POST",
 

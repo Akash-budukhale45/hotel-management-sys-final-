@@ -1,7 +1,7 @@
 // index.js
 // Home page logic (clean version)
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://hotel-management-sys-final-ozya.onrender.com/";
 
 document.addEventListener("DOMContentLoaded", () => {
 
