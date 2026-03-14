@@ -1,4 +1,4 @@
-const BASE_URL = "https://hotel-management-sys-qdkx.onrender.com";
+const BASE_URL = "http://localhost:5000";
 
 document.addEventListener("DOMContentLoaded", () => {
   loadProfile();

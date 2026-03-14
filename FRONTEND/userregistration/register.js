@@ -9,7 +9,7 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
   const adminCode = document.getElementById("adminCode").value; // ✅ ADDED
 
   try {
-    const res = await fetch("https://hotel-management-sys-qdkx.onrender.com", {
+    const res = await fetch("http://localhost:5000/api/auth/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

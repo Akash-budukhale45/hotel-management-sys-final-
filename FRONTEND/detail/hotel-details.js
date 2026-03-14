@@ -12,7 +12,7 @@ const loginMessage = document.getElementById("loginMessage");
 const stars = document.querySelectorAll(".star-input span");
 
 let selectedRating = 0;
-const BASE_URL = "https://hotel-management-sys-qdkx.onrender.com";
+const BASE_URL = "http://localhost:5000";
 
 // ================= LOGIN CHECK =================
 const token = localStorage.getItem("token");
