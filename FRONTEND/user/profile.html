@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>User Dashboard</title>
+
+<link rel="stylesheet" href="profile.css">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+<!-- ===== SIDEBAR ===== -->
+
+<div class="sidebar">
+
+<h2 class="logo">Hospita<span>Sys</span></h2>
+
+<a href="../homepage/index.html">🏠 Home</a>
+<a href="../hotellist/hotels.html">🏨 Hotels</a>
+<a href="#">📅 My Bookings</a>
+<a href="#">👤 Profile</a>
+
+<button id="logoutBtn">Logout</button>
+
+</div>
+
+
+<!-- ===== MAIN CONTENT ===== -->
+
+<div class="main">
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+
+<h1> User Dashboard</h1>
+
+<div class="user-info">
+
+<span id="profileName"></span>
+
+<!-- <img src="https://i.pravatar.cc/40"> -->
+
+</div> 
+
+</div>
+
+
+<!-- USER INFO -->
+
+<div class="card">
+
+<h2>Personal Information</h2>
+
+<p><strong>Name:</strong> <span id="profileName2"></span></p>
+<p><strong>Email:</strong> <span id="profileEmail"></span></p>
+
+</div>
+
+
+<!-- CURRENT BOOKINGS -->
+
+<div class="card">
+
+<h2>Current Bookings</h2>
+
+<table id="currentBookings">
+
+<thead>
+<tr>
+<th>Hotel</th>
+<th>Check In</th>
+<th>Check Out</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody></tbody>
+
+</table>
+
+</div>
+
+
+<!-- HISTORY -->
+
+<div class="card">
+
+<h2>Booking History</h2>
+
+<table id="historyBookings">
+
+<thead>
+<tr>
+<th>Hotel</th>
+<th>Check In</th>
+<th>Check Out</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody></tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="profile.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,398 @@
+/* ===== GOOGLE FONT ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+/* ===== BODY ===== */
+
+body{
+background:linear-gradient(135deg,#eef2f7,#f7f9fc);
+color:#2c3e50;
+}
+
+/* ===== HOTEL INFO ===== */
+
+.hotel-info{
+
+max-width:1200px;
+margin:50px auto;
+
+background:white;
+border-radius:14px;
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:35px;
+
+padding:35px;
+
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+.hotel-info img{
+
+width:100%;
+height:360px;
+
+object-fit:cover;
+
+border-radius:12px;
+
+transition:0.4s;
+
+}
+
+.hotel-info img:hover{
+
+transform:scale(1.05);
+
+}
+
+/* ===== HOTEL DETAILS ===== */
+
+.hotel-details h1{
+
+font-size:32px;
+margin-bottom:10px;
+
+}
+
+.hotel-details p{
+
+line-height:1.7;
+margin-bottom:10px;
+color:#555;
+
+}
+
+.rating{
+
+font-size:22px;
+color:#f4b400;
+margin-top:10px;
+
+}
+
+/* ===== REVIEW FORM ===== */
+
+.review-form-section{
+
+max-width:900px;
+margin:50px auto;
+
+background:white;
+
+padding:35px;
+
+border-radius:12px;
+
+box-shadow:0 12px 35px rgba(0,0,0,0.08);
+
+}
+
+.review-form-section h2{
+
+margin-bottom:25px;
+font-weight:600;
+
+}
+
+.review-form{
+
+display:flex;
+flex-direction:column;
+
+gap:15px;
+
+}
+
+/* ===== STAR INPUT ===== */
+
+.star-input{
+
+font-size:32px;
+
+}
+
+.star-input span{
+
+cursor:pointer;
+
+color:#ddd;
+
+transition:0.3s;
+
+}
+
+.star-input span:hover,
+.star-input span.active{
+
+color:#f4b400;
+
+transform:scale(1.2);
+
+}
+
+/* ===== TEXTAREA ===== */
+
+.review-form textarea{
+
+padding:12px;
+
+border-radius:8px;
+
+border:1px solid #ddd;
+
+resize:none;
+
+outline:none;
+
+transition:0.3s;
+
+}
+
+.review-form textarea:focus{
+
+border-color:#4a90e2;
+
+}
+
+/* ===== BUTTON ===== */
+
+.review-form button{
+
+padding:12px;
+
+background:linear-gradient(135deg,#4a90e2,#0077ff);
+
+border:none;
+
+color:white;
+
+font-size:16px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.review-form button:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 8px 18px rgba(0,119,255,0.3);
+
+}
+
+/* ===== REVIEW CONTROLS ===== */
+
+.review-controls{
+
+max-width:1200px;
+
+margin:30px auto;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.review-controls select{
+
+padding:10px 14px;
+
+border-radius:8px;
+
+border:1px solid #ccc;
+
+outline:none;
+
+}
+
+/* ===== REVIEWS GRID ===== */
+
+.reviews{
+
+max-width:1200px;
+
+margin:30px auto;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:25px;
+
+}
+
+/* ===== REVIEW CARD ===== */
+
+.review-card{
+
+background:white;
+
+border-radius:12px;
+
+padding:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.07);
+
+transition:0.3s;
+
+position:relative;
+
+}
+
+.review-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 18px 40px rgba(0,0,0,0.12);
+
+}
+
+.review-card h4{
+
+margin-bottom:5px;
+
+}
+
+.review-card .stars{
+
+color:#f4b400;
+
+margin-bottom:8px;
+
+font-size:18px;
+
+}
+
+.review-card p{
+
+font-size:14px;
+
+color:#555;
+
+line-height:1.6;
+
+}
+
+/* ===== COMPARISON ===== */
+
+.comparison{
+
+max-width:1000px;
+
+margin:60px auto;
+
+background:white;
+
+padding:35px;
+
+border-radius:12px;
+
+box-shadow:0 12px 30px rgba(0,0,0,0.08);
+
+}
+
+.comparison h2{
+
+margin-bottom:25px;
+
+}
+
+/* ===== TABLE ===== */
+
+.comparison table{
+
+width:100%;
+
+border-collapse:collapse;
+
+}
+
+.comparison th{
+
+background:#4a90e2;
+
+color:white;
+
+padding:12px;
+
+text-align:left;
+
+}
+
+.comparison td{
+
+padding:12px;
+
+border-bottom:1px solid #eee;
+
+}
+
+/* ===== LOGIN MESSAGE ===== */
+
+.login-message{
+
+background:#fff3cd;
+
+padding:12px;
+
+border-radius:8px;
+
+margin-bottom:15px;
+
+color:#856404;
+
+}
+
+/* ===== FOOTER ===== */
+
+.footer{
+
+margin-top:60px;
+
+background:#1f2937;
+
+color:white;
+
+text-align:center;
+
+padding:20px;
+
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:900px){
+
+.hotel-info{
+
+grid-template-columns:1fr;
+
+}
+
+.review-controls{
+
+flex-direction:column;
+
+gap:10px;
+
+align-items:flex-start;
+
+}
+
+}

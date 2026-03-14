@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hotels | Digital Hospitality System</title>
+
+  <!-- Navbar CSS -->
+  <link rel="stylesheet" href="../common/navbar.css">
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="hotels.css" />
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+
+    <div class="logo">Hospita<span>Sys</span></div>
+
+    <nav>
+      <a href="../homepage/index.html">Home</a>
+
+      <a href="../hotellist/hotels.html" class="active">
+        Hotels
+      </a>
+
+      <a href="../userlogin/login.html" id="loginLink">
+        Login
+      </a>
+
+      <a href="../userregistration/register.html"
+         id="registerLink"
+         class="btn">
+         Register
+      </a>
+
+      <a href="../user/profile.html"
+         id="userName"
+         style="display:none;">
+         My Profile
+      </a>
+
+      <a href="#"
+         id="logoutLink"
+         style="display:none;">
+         Logout
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="page-header">
+
+    <h1>Hotels in the Hospitality Ecosystem</h1>
+
+    <p>
+      Explore hotel services as a core component of the hospitality industry,
+      supported by transparent digital ratings and user feedback.
+    </p>
+
+  </section>
+
+
+  <!-- ===== SEARCH BAR ===== -->
+
+  <section class="search-section">
+
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search hotels by name or city..."
+    />
+
+  </section>
+
+
+  <!-- ===== TOP RATED HOTELS ===== -->
+
+  <section class="top-rated">
+
+    <h2>⭐ Top Rated Hotels</h2>
+
+    <div class="hotels-container" id="topHotels">
+      <!-- Top 5 hotels injected by JS -->
+    </div>
+
+  </section>
+
+
+  <!-- ===== ALL HOTELS ===== -->
+
+  <section class="hotels-container" id="hotelsContainer">
+    <!-- All hotels injected by JS -->
+  </section>
+
+
+  <!-- ===== FOOTER ===== -->
+
+  <footer class="footer">
+    <p>© 2025 Digital Information System in Hospitality</p>
+  </footer>
+
+
+  <!-- Navbar JS -->
+  <script src="../common/navbar.js"></script>
+
+  <!-- Page JS -->
+  <script src="hotels.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+/* ===== RESET ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI",Tahoma,sans-serif;
+}
+
+body{
+  background:#f8fafc;
+  color:#1f2937;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 60px;
+  background:#ffffff;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo{
+  font-size:24px;
+  font-weight:700;
+}
+
+.logo span{
+  color:#2563eb;
+}
+
+.navbar nav a{
+  margin-left:25px;
+  text-decoration:none;
+  color:#374151;
+  font-weight:500;
+}
+
+.navbar nav a.active{
+  color:#2563eb;
+}
+
+.navbar .btn{
+  padding:8px 16px;
+  background:#2563eb;
+  color:#fff;
+  border-radius:6px;
+}
+
+/* ===== HERO HEADER ===== */
+.page-header{
+  text-align:center;
+  padding:110px 20px;
+  color:white;
+
+  background:
+  linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+  url("https://images.unsplash.com/photo-1566073771259-6a8506099945");
+
+  background-size:cover;
+  background-position:center;
+}
+
+.page-header h1{
+  font-size:42px;
+  margin-bottom:15px;
+  font-weight:700;
+}
+
+.page-header p{
+  max-width:700px;
+  margin:auto;
+  font-size:18px;
+  color:#e5e7eb;
+}
+
+/* ===== SEARCH ===== */
+
+.search-section{
+  margin-top:-30px;
+  margin-bottom:40px;
+  text-align:center;
+}
+
+#searchInput{
+  width:420px;
+  padding:14px 20px;
+  font-size:16px;
+
+  border:none;
+  border-radius:40px;
+
+  box-shadow:0 8px 25px rgba(0,0,0,0.15);
+}
+
+#searchInput:focus{
+  outline:none;
+}
+
+/* ===== SECTION TITLES ===== */
+
+.top-rated{
+  padding:20px 120px;
+}
+
+.top-rated h2{
+  font-size:26px;
+  color:#2563eb;
+  margin-bottom:20px;
+}
+
+/* ===== HOTELS GRID ===== */
+
+.hotels-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:28px;
+  padding:40px 120px;
+}
+
+/* ===== HOTEL CARD ===== */
+
+.hotel-card{
+  background:#ffffff;
+  border-radius:16px;
+  overflow:hidden;
+
+  box-shadow:0 8px 25px rgba(0,0,0,0.08);
+
+  transition:transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.hotel-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 18px 40px rgba(0,0,0,0.18);
+}
+
+/* IMAGE */
+
+.hotel-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  transition:transform 0.35s ease;
+}
+
+.hotel-card:hover img{
+  transform:scale(1.06);
+}
+
+/* CARD CONTENT */
+
+.hotel-content{
+  padding:22px;
+}
+
+.hotel-content h3{
+  font-size:20px;
+  margin-bottom:6px;
+}
+
+.location{
+  font-size:14px;
+  color:#6b7280;
+  margin-bottom:10px;
+}
+
+.stars{
+  color:#f59e0b;
+  margin-bottom:8px;
+}
+
+.description{
+  font-size:14px;
+  color:#374151;
+  margin-bottom:14px;
+}
+
+/* PRICE */
+
+.price{
+  font-size:18px;
+  font-weight:700;
+  color:#16a34a;
+  margin-bottom:10px;
+}
+
+/* RATING */
+
+.rating{
+  font-weight:600;
+  margin-bottom:14px;
+}
+
+/* BUTTONS */
+
+.view-btn{
+  display:inline-block;
+  padding:10px 16px;
+  background:#2563eb;
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+  font-size:14px;
+}
+
+.hotel-content button{
+  background:linear-gradient(135deg,#ff7a18,#ff4b2b);
+  color:#fff;
+  border:none;
+  padding:9px 16px;
+  margin-left:8px;
+  border-radius:6px;
+  font-size:14px;
+  cursor:pointer;
+  transition:all 0.3s ease;
+}
+
+.hotel-content button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+.hotel-content button:active{
+  transform:scale(0.96);
+}
+
+/* ===== TOP HOTEL BADGE ===== */
+
+.top-card{
+  border:2px solid #facc15;
+  position:relative;
+}
+
+.badge{
+  position:absolute;
+  top:12px;
+  left:12px;
+  background:#facc15;
+  color:#111827;
+  font-size:12px;
+  font-weight:700;
+  padding:5px 8px;
+  border-radius:4px;
+}
+
+/* ===== FOOTER ===== */
+
+.footer{
+  background:#111827;
+  color:#d1d5db;
+  text-align:center;
+  padding:25px;
+  font-size:14px;
+  margin-top:40px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:768px){
+
+  .navbar{
+    padding:15px 25px;
+  }
+
+  .hotels-container{
+    padding:30px;
+  }
+
+  .top-rated{
+    padding:20px 30px;
+  }
+
+  #searchInput{
+    width:90%;
+  }
+
+  .page-header h1{
+    font-size:32px;
+  }
+}

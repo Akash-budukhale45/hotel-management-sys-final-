@@ -1,0 +1,260 @@
+/* ===== RESET ===== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Segoe UI",sans-serif;
+}
+
+/* ===== BODY ===== */
+
+body{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:linear-gradient(135deg,#1e3a8a,#2563eb,#4f46e5);
+
+background-size:200% 200%;
+
+animation:bgMove 10s ease infinite;
+
+}
+
+/* background animation */
+
+@keyframes bgMove{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+
+/* ===== LOGIN CARD ===== */
+
+.login-card{
+
+width:380px;
+
+padding:45px;
+
+border-radius:18px;
+
+background:white;
+
+box-shadow:0 20px 50px rgba(0,0,0,0.25);
+
+text-align:center;
+
+transition:0.3s;
+
+}
+
+.login-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 30px 70px rgba(0,0,0,0.3);
+
+}
+
+
+/* ===== LOGO ===== */
+
+.logo{
+
+font-size:30px;
+
+font-weight:700;
+
+margin-bottom:10px;
+
+color:#111827;
+
+}
+
+.logo span{
+
+color:#2563eb;
+
+}
+
+.subtitle{
+
+font-size:14px;
+
+color:#6b7280;
+
+margin-bottom:30px;
+
+}
+
+
+/* ===== INPUT GROUP ===== */
+
+.input-group{
+
+position:relative;
+
+margin-bottom:25px;
+
+}
+
+.input-group input{
+
+width:100%;
+
+padding:12px 14px;
+
+border-radius:8px;
+
+border:1px solid #d1d5db;
+
+font-size:14px;
+
+transition:0.3s;
+
+}
+
+.input-group input:focus{
+
+outline:none;
+
+border-color:#2563eb;
+
+box-shadow:0 0 0 3px rgba(37,99,235,0.15);
+
+}
+
+
+/* floating label */
+
+.input-group label{
+
+position:absolute;
+
+left:14px;
+
+top:12px;
+
+font-size:14px;
+
+color:#6b7280;
+
+background:white;
+
+padding:0 4px;
+
+transition:0.3s;
+
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label{
+
+top:-8px;
+
+font-size:12px;
+
+color:#2563eb;
+
+}
+
+
+/* ===== BUTTON ===== */
+
+button{
+
+width:100%;
+
+padding:12px;
+
+border:none;
+
+border-radius:8px;
+
+background:linear-gradient(135deg,#2563eb,#4f46e5);
+
+color:white;
+
+font-size:15px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:all 0.3s ease;
+
+}
+
+button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 12px 25px rgba(37,99,235,0.4);
+
+background:linear-gradient(135deg,#1d4ed8,#4338ca);
+
+}
+
+button:active{
+
+transform:scale(0.97);
+
+}
+
+
+/* ===== SWITCH LINK ===== */
+
+.switch{
+
+margin-top:20px;
+
+font-size:14px;
+
+color:#374151;
+
+}
+
+.switch a{
+
+color:#2563eb;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:0.3s;
+
+}
+
+.switch a:hover{
+
+color:#1d4ed8;
+
+text-decoration:underline;
+
+}
+
+
+/* ===== MOBILE ===== */
+
+@media(max-width:480px){
+
+.login-card{
+
+width:90%;
+
+padding:35px;
+
+}
+
+}

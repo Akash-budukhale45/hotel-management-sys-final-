@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register | Digital Hospitality System</title>    
+  <link rel="stylesheet" href="register.css" />
+</head>
+<body>
+
+  <div class="auth-container">
+    <h1>Create Account</h1>
+    <p class="subtitle">
+      Register to participate in hotel rating and review systems.
+    </p>
+
+    <form id="registerForm">
+      <label>Full Name</label>
+      <input type="text" id="name" required />
+
+      <label>Email Address</label>
+      <input type="email" id="email" required />
+
+      <label>Password</label>
+      <input type="password" id="password" required />
+
+      <!-- ✅ ADMIN CODE FIELD ADDED -->
+      <label>Admin Code (Optional)</label>
+      <input type="text" id="adminCode" placeholder="Enter admin code if you are admin" />
+
+      <button type="submit">Register</button>
+    </form>
+
+    <p class="switch">
+      Already have an account?
+      <a href="../userlogin/login.html">Login</a>
+    </p>
+  </div>
+
+  <script src="register.js"></script>
+</body>
+</html>
