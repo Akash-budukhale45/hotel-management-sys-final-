@@ -2,7 +2,7 @@ const token = localStorage.getItem("token");
 
 async function loadHotels(){
 
-const res = await fetch("http://localhost:5000/api/hotels",{
+const res = await fetch("https://hotel-management-sys-qdkx.onrender.com/api/hotels",{
 
 headers:{
 "Authorization":`Bearer ${token}`
