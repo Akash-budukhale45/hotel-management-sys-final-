@@ -7,7 +7,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
   const password = document.getElementById("password").value;
 
   try {
-    const res = await fetch("https://hotel-management-sys-final-ozya.onrender.com/api/auth/login", {
+    const res = await fetch("https://hotel-management-sys-final-ozya.onrender.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
