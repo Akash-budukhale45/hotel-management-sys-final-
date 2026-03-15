@@ -1,11 +1,10 @@
-// index.js
-// Home page logic (clean version)
+// ================= CONFIG =================
 
 const BASE_URL = "http://localhost:5000";
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  console.log("Digital Hospitality Home Page Loaded");
+  console.log("HospitaSys Home Page Loaded");
 
   updateNavbar();
   loadHomeTopHotels();
@@ -52,15 +51,15 @@ function updateNavbar(){
 
 // ================= LOAD TOP HOTELS =================
 
-async function loadHomeTopHotels() {
+async function loadHomeTopHotels(){
 
   const container = document.getElementById("homeTopHotels");
 
-  if (!container) return;
+  if(!container) return;
 
   container.innerHTML = "<p>Loading top rated hotels...</p>";
 
-  try {
+  try{
 
     const res = await fetch(`${BASE_URL}/api/hotels/top`);
 
@@ -68,41 +67,55 @@ async function loadHomeTopHotels() {
 
     container.innerHTML = "";
 
-    if (!Array.isArray(hotels) || hotels.length === 0) {
+    if(!Array.isArray(hotels) || hotels.length === 0){
 
       container.innerHTML = "<p>No top rated hotels available.</p>";
       return;
 
     }
 
-    hotels.slice(0, 3).forEach(hotel => {
+    hotels.slice(0,3).forEach(hotel => {
 
-      const image =
-        hotel.images && hotel.images.length
-          ? hotel.images[0]
-          : "https://via.placeholder.com/400x300?text=Hotel";
+      const image = hotel.images && hotel.images.length
+        ? hotel.images[0]
+        : "https://via.placeholder.com/400x300?text=Hotel";
 
-      container.innerHTML += `
-        <div class="home-hotel-card">
+      const card = document.createElement("div");
 
-          <img src="${image}" alt="${hotel.name}">
+      card.className = "hotel-card";
 
-          <div class="info">
-            <h3>${hotel.name}</h3>
-            <p>${hotel.location}</p>
-            <p class="rating">⭐ ${hotel.averageRating || 0} / 5</p>
-          </div>
+      card.innerHTML = `
+
+        <img src="${image}" alt="${hotel.name}">
+
+        <div class="hotel-info">
+
+          <h3>${hotel.name}</h3>
+
+          <p class="location">${hotel.location}</p>
+
+          <p class="rating">⭐ ${hotel.averageRating || 0} / 5</p>
+
+          <a href="../detail/hotel-details.html?id=${hotel._id}" 
+             class="view-btn">
+             View Details
+          </a>
 
         </div>
+
       `;
+
+      container.appendChild(card);
 
     });
 
-  } catch (error) {
+  }
 
-    console.error("Error loading top rated hotels:", error);
+  catch(error){
 
-    container.innerHTML = "<p>Unable to load data.</p>";
+    console.error("Error loading hotels:", error);
+
+    container.innerHTML = "<p>Unable to load hotels.</p>";
 
   }
 

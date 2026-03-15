@@ -1,126 +1,180 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hotel Details | Digital Hospitality System</title>
-  
-  <link rel="stylesheet" href="../common/navbar.css" />
-  <link rel="stylesheet" href="hotel-details.css" />
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hotel Details | Digital Hospitality System</title>
+
+<link rel="stylesheet" href="../common/navbar.css">
+<link rel="stylesheet" href="hotel-details.css">
+
 </head>
+
 <body>
 
-  <!-- ===== NAVBAR ===== -->
-  <header class="navbar">
+<!-- ===== NAVBAR ===== -->
 
-  <div class="logo">Hospita<span>Sys</span></div>
+<header class="navbar">
 
-  <div class="navbar-right">
+<div class="logo">Hospita<span>Sys</span></div>
 
-    <a href="../homepage/index.html">Home</a>
+<div class="navbar-right">
 
-    <a href="../hotellist/hotels.html">Hotels</a>
+<a href="../homepage/index.html">Home</a>
 
-    <a href="../userlogin/login.html" id="loginLink">
-      Login
-    </a>
+<a href="../hotellist/hotels.html">Hotels</a>
 
-    <a href="../userregistration/register.html"
-       id="registerLink"
-       class="btn">
-       Register
-    </a>
+<a href="../userlogin/login.html" id="loginLink">Login</a>
 
-    <a href="../user/profile.html"
-       id="userName"
-       style="display:none;">
-       My Profile
-    </a>
+<a href="../userregistration/register.html" id="registerLink" class="btn">Register</a>
 
-    <a href="#"
-       id="logoutLink"
-       style="display:none;">
-       Logout
-    </a>
+<a href="../user/profile.html" id="userName" style="display:none;">My Profile</a>
 
-  </div>
+<a href="#" id="logoutLink" style="display:none;">Logout</a>
+
+</div>
 
 </header>
 
-  <!-- ===== HOTEL INFO ===== -->
-  <section class="hotel-info" id="hotelInfo"></section>
 
-  <!-- ===== REVIEW FORM ===== -->
-  <section class="review-form-section">
-    <h2>Submit Your Review</h2>
+<!-- ===== HOTEL INFO ===== -->
 
-    <div id="loginMessage" class="login-message">
-      Please login to submit a rating and review.
-    </div>
+<section class="hotel-info" id="hotelInfo">
 
-    <form id="reviewForm" class="review-form">
-      <label>Rating</label>
-      <div class="star-input" id="starInput">
-        <span data-value="1">★</span>
-        <span data-value="2">★</span>
-        <span data-value="3">★</span>
-        <span data-value="4">★</span>
-        <span data-value="5">★</span>
-      </div>
+<h1 id="hotelName">Hotel Name</h1>
 
-      <label>Review</label>
-      <textarea id="reviewText" rows="4" placeholder="Write your experience..." required></textarea>
+<p class="location" id="hotelLocation">Location</p>
 
-      <button type="submit">Submit Review</button>
-    </form>
-  </section>
+<p class="rating">
+⭐ <span id="hotelRating">0</span> / 5
+</p>
 
-  <!-- ===== REVIEW CONTROLS ===== -->
-  <section class="review-controls">
-    <h2>User Reviews</h2>
-    <select id="sortReviews">
-      <option value="relevant">Most Relevant</option>
-      <option value="recent">Most Recent</option>
-      <option value="low">Lowest Rating</option>
-    </select>
-  </section>
+<p class="price">
+₹ <span id="hotelPrice">0</span> / day
+</p>
 
-  <!-- ===== REVIEWS LIST ===== -->
-  <section class="reviews" id="reviewsContainer"></section>
+<p class="description">
+Enjoy a comfortable and relaxing stay with modern facilities and quality hospitality services.
+</p>
 
-  <!-- ===== COMPARISON ===== -->
-  <section class="comparison">
-    <h2>Comparative Observation</h2>
-    <table>
-      <tr>
-        <th>Sorting Method</th>
-        <th>Average Rating</th>
-        <th>Observation</th>
-      </tr>
-      <tr>
-        <td>Most Relevant</td>
-        <td>4.2</td>
-        <td>Balanced feedback improves trust</td>
-      </tr>
-      <tr>
-        <td>Most Recent</td>
-        <td>4.1</td>
-        <td>Recent experiences highlighted</td>
-      </tr>
-      <tr>
-        <td>Lowest Rating</td>
-        <td>3.8</td>
-        <td>Critical opinions become visible</td>
-      </tr>
-    </table>
-  </section>
-  
+</section>
 
-  <footer class="footer">
-    <p>© 2025 Digital Information System in Hospitality</p>
-  </footer>
-   <script src="../common/navbar.js"></script>
-  <script src="hotel-details.js"></script>
+
+<!-- ===== REVIEW FORM ===== -->
+
+<section class="review-form-section">
+
+<h2>Submit Your Review</h2>
+
+<div id="loginMessage" class="login-message">
+Please login to submit a rating and review.
+</div>
+
+<form id="reviewForm" class="review-form">
+
+<label>Rating</label>
+
+<div class="star-input" id="starInput">
+
+<span data-value="1">★</span>
+<span data-value="2">★</span>
+<span data-value="3">★</span>
+<span data-value="4">★</span>
+<span data-value="5">★</span>
+
+</div>
+
+<label>Review</label>
+
+<textarea id="reviewText" rows="4" placeholder="Write your experience..." required></textarea>
+
+<button type="submit">Submit Review</button>
+
+</form>
+
+</section>
+
+
+<!-- ===== REVIEW CONTROLS ===== -->
+
+<section class="review-controls">
+
+<h2>User Reviews</h2>
+
+<select id="sortReviews">
+
+<option value="relevant">Most Relevant</option>
+
+<option value="recent">Most Recent</option>
+
+<option value="low">Lowest Rating</option>
+
+</select>
+
+</section>
+
+
+<!-- ===== REVIEWS LIST ===== -->
+
+<section class="reviews" id="reviewsContainer">
+
+</section>
+
+
+<!-- ===== COMPARISON ===== -->
+
+<section class="comparison">
+
+<h2>Comparative Observation</h2>
+
+<table>
+
+<tr>
+<th>Sorting Method</th>
+<th>Average Rating</th>
+<th>Observation</th>
+</tr>
+
+<tr>
+<td>Most Relevant</td>
+<td>4.2</td>
+<td>Balanced feedback improves trust</td>
+</tr>
+
+<tr>
+<td>Most Recent</td>
+<td>4.1</td>
+<td>Recent experiences highlighted</td>
+</tr>
+
+<tr>
+<td>Lowest Rating</td>
+<td>3.8</td>
+<td>Critical opinions become visible</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+
+<footer class="footer">
+
+<p>© 2025 Digital Information System in Hospitality</p>
+
+<p>Developed by Akash Budukhale</p>
+
+</footer>
+
+
+<script src="../common/navbar.js"></script>
+<script src="hotel-details.js"></script>
+
 </body>
+
 </html>
